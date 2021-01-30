@@ -1,0 +1,14 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+
+<div class="card-columns">
+
+    <div class="card" *ngFor="let heroe of lstHeroes; let i = index">
+        <img [src]="heroe.img" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{heroe.nombre}}</h5>
+            <p class="card-text">{{heroe.bio}}</p>
+            <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+            <button [routerLink]="['/heroe', i]" class="btn btn-block btn-primary">Ir al detalle</button>
+        </div>
+    </div>
+</div>
